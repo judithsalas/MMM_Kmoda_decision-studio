@@ -37,6 +37,15 @@ st.markdown("""
 .stApp,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{background-color:#f8fafc!important;color:#111827!important}
 [data-testid="stHeader"]{background-color:#f8fafc!important}
 html,body,[class*="st-"]{font-family:'DM Sans',sans-serif;color:#111827}
+/* Restaurar Material Symbols en iconos de Streamlit — mi regla [class*="st-"] estaba pisando la fuente de iconos y los mostraba como texto ("keyboard_double_arrow_left") */
+.material-symbols-rounded,.material-symbols-outlined,.material-icons,[class*="material-symbols"],[class*="material-icons"]{
+    font-family:'Material Symbols Rounded','Material Symbols Outlined','Material Icons'!important;
+    font-weight:normal!important;font-style:normal!important;
+    text-transform:none!important;letter-spacing:normal!important;
+    word-wrap:normal!important;white-space:nowrap!important;
+    direction:ltr!important;font-feature-settings:'liga'!important
+}
+[data-testid="stSidebarCollapseButton"],[data-testid="stSidebarCollapsedControl"]{overflow:hidden!important}
 h1,h2,h3{font-family:'Playfair Display',serif;color:#111827}
 [data-testid="stMarkdownContainer"] p,[data-testid="stMarkdownContainer"] li,.stTextInput label,.stSlider label,.stRadio label{color:#111827!important}
 section[data-testid="stSidebar"]{background:#ffffff!important;border-right:1px solid #e5e7eb}
