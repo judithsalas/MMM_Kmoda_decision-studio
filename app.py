@@ -46,6 +46,17 @@ html,body,[class*="st-"]{font-family:'DM Sans',sans-serif;color:#111827}
     direction:ltr!important;font-feature-settings:'liga'!important
 }
 [data-testid="stSidebarCollapseButton"],[data-testid="stSidebarCollapsedControl"]{overflow:hidden!important}
+/* Ocultar botones de collapse/expand del sidebar — el icono Material se muestra como texto "keyboard_double_arrow_*" en Streamlit Cloud y ensucia el logo. En una app de presentación no necesitamos colapsar. */
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"],
+[data-testid="stSidebarHeader"] button,
+button[kind="header"],
+button[kind="headerNoPadding"]{
+    display:none!important;
+    visibility:hidden!important;
+    width:0!important;height:0!important;opacity:0!important
+}
 h1,h2,h3{font-family:'Playfair Display',serif;color:#111827}
 [data-testid="stMarkdownContainer"] p,[data-testid="stMarkdownContainer"] li,.stTextInput label,.stSlider label,.stRadio label{color:#111827!important}
 section[data-testid="stSidebar"]{background:#ffffff!important;border-right:1px solid #e5e7eb}
