@@ -348,7 +348,7 @@ def style_axes(fig):
     fig.update_layout(title_font=dict(size=17, color="#111827"), legend_font=dict(color="#374151", size=12))
     return fig
 
-GC = {'perf': '#1e3a5f', 'crm': '#7b3f4d', 'brand': '#a8826e', 'offline': '#6b7280'}
+GC = {'perf': '#1e3a5f', 'crm': '#7b3f4d', 'brand': '#a8826e', 'offline': '#4a4e5a'}
 GN = {'perf': 'Performance', 'crm': 'CRM / Loyalty', 'brand': 'Brand Digital', 'offline': 'Offline'}
 
 # ─── SIDEBAR ───
