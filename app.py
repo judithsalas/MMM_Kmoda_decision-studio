@@ -97,7 +97,7 @@ section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
 section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] span,
 section[data-testid="stSidebar"] label,
 section[data-testid="stSidebar"] .stRadio label{color:#374151!important}
-section[data-testid="stSidebar"] .stRadio label:hover{color:#2563eb!important}
+section[data-testid="stSidebar"] .stRadio label:hover{color:#1e3a5f!important}
 section[data-testid="stSidebar"] small{color:#6b7280!important}
 .sidebar-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#111827!important;margin-bottom:4px;letter-spacing:1px}
 .sidebar-sub{font-size:12px;color:#4b5563!important;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
@@ -112,19 +112,19 @@ section[data-testid="stSidebar"] small{color:#6b7280!important}
 .kpi-sub{font-size:12px;color:#4b5563;margin-top:4px}
 .section-header{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:#111827;margin:20px 0 10px;padding-bottom:8px;border-bottom:2px solid #c9a96e}
 .callout-gold{background:#fffbeb;border-left:4px solid #c9a96e;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#78350f}
-.callout-blue{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#1e3a8a}
-.callout-red{background:#fef2f2;border-left:4px solid #dc2626;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#7f1d1d}
-.callout-green{background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#14532d}
-.method-badge{display:inline-block;background:#eff6ff;color:#2563eb!important;border:1px solid #bfdbfe;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.8px}
+.callout-blue{background:#eef1f5;border-left:4px solid #1e3a5f;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#0f2742}
+.callout-red{background:#fef2f2;border-left:4px solid #9c5a5a;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#7f1d1d}
+.callout-green{background:#eef2ef;border-left:4px solid #5f7a6a;border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:15px;color:#374a3f}
+.method-badge{display:inline-block;background:#eef1f5;color:#1e3a5f!important;border:1px solid #c8d2dc;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.8px}
 .semaforo{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:middle}
-.sem-verde{background:#16a34a;box-shadow:0 0 6px #16a34a80}
-.sem-amarillo{background:#d97706;box-shadow:0 0 6px #d9770680}
-.sem-rojo{background:#dc2626;box-shadow:0 0 6px #dc262680}
+.sem-verde{background:#5f7a6a;box-shadow:0 0 6px #5f7a6a80}
+.sem-amarillo{background:#a8826e;box-shadow:0 0 6px #a8826e80}
+.sem-rojo{background:#9c5a5a;box-shadow:0 0 6px #9c5a5a80}
 #MainMenu{visibility:hidden}footer{visibility:hidden}header{visibility:hidden}
 /* Buttons light */
 .stButton>button{background:#ffffff!important;color:#374151!important;border:1.5px solid #e5e7eb!important;border-radius:10px!important;font-weight:600!important;font-size:13px!important;padding:8px 16px!important;transition:all .2s!important}
-.stButton>button:hover{border-color:#2563eb!important;color:#2563eb!important;box-shadow:0 2px 8px rgba(37,99,235,.12)!important}
-.stButton>button:active,.stButton>button:focus{background:#eff6ff!important;border-color:#2563eb!important;color:#2563eb!important}
+.stButton>button:hover{border-color:#1e3a5f!important;color:#1e3a5f!important;box-shadow:0 2px 8px rgba(30,58,95,.12)!important}
+.stButton>button:active,.stButton>button:focus{background:#eef1f5!important;border-color:#1e3a5f!important;color:#1e3a5f!important}
 /* Inline code light */
 code{background:#f3f4f6!important;color:#374151!important;padding:2px 6px!important;border-radius:4px!important;font-size:13px!important}
 /* Number inputs light */
@@ -133,7 +133,7 @@ code{background:#f3f4f6!important;color:#374151!important;padding:2px 6px!import
 [data-testid="stNumberInput"] button:hover{background:#e5e7eb!important;color:#111827!important}
 input[type="number"]{background:#ffffff!important;color:#111827!important}
 .alloc-card{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:10px;border:1.5px solid #e5e7eb;box-shadow:0 2px 10px rgba(0,0,0,.03);transition:all .2s}
-.alloc-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.07);border-color:#2563eb}
+.alloc-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.07);border-color:#1e3a5f}
 .alloc-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
 .alloc-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
 .alloc-name{font-weight:700;font-size:14px;color:#111827;flex:1}
@@ -145,22 +145,22 @@ input[type="number"]{background:#ffffff!important;color:#111827!important}
 .budget-segment{height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .3s ease;text-shadow:0 1px 2px rgba(0,0,0,.3)}
 .budget-bar-labels{display:flex;justify-content:space-between;font-size:11px;color:#374151;padding:0 2px}
 .results-panel{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:28px;color:#111827;box-shadow:0 10px 30px rgba(15,23,42,.06)}
-.results-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#2563eb;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+.results-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:#1e3a5f;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
 .result-metric{margin-bottom:18px}
 .result-label{font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:3px}
 .result-value{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#111827;line-height:1}
 .result-sub{font-size:12px;color:#4b5563;margin-top:3px}
 .result-divider{border:none;border-top:1px solid #e5e7eb;margin:16px 0}
 .semaforo-grande{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;margin-top:8px}
-.sem-g-verde{background:rgba(22,163,74,.1)}.sem-g-amarillo{background:rgba(217,119,6,.1)}.sem-g-rojo{background:rgba(220,38,38,.1)}
+.sem-g-verde{background:rgba(95,122,106,.1)}.sem-g-amarillo{background:rgba(168,130,110,.1)}.sem-g-rojo{background:rgba(220,38,38,.1)}
 .sem-dot-big{width:20px;height:20px;border-radius:50%;flex-shrink:0}
-.sem-dot-verde{background:#16a34a;box-shadow:0 0 10px #16a34a60}
-.sem-dot-amarillo{background:#d97706;box-shadow:0 0 10px #d9770660}
-.sem-dot-rojo{background:#dc2626;box-shadow:0 0 10px #dc262660}
+.sem-dot-verde{background:#5f7a6a;box-shadow:0 0 10px #5f7a6a60}
+.sem-dot-amarillo{background:#a8826e;box-shadow:0 0 10px #a8826e60}
+.sem-dot-rojo{background:#9c5a5a;box-shadow:0 0 10px #9c5a5a60}
 .sem-text{font-size:13px;font-weight:600;color:#111827}
 .interp-msg{background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:18px 22px;margin-top:16px;font-size:14px;line-height:1.6;color:#78350f}
 .sum-indicator{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px;border-radius:10px;font-size:14px;font-weight:700;margin-top:6px}
-.sum-ok{background:rgba(22,163,74,.1);color:#15803d;border:1px solid rgba(22,163,74,.3)}
+.sum-ok{background:rgba(95,122,106,.1);color:#15803d;border:1px solid rgba(95,122,106,.3)}
 .sum-error{background:rgba(220,38,38,.08);color:#b91c1c;border:1px solid rgba(220,38,38,.25)}
 .check-item{padding:6px 0;font-size:14px;color:#111827;border-bottom:1px solid #f3f4f6}
 .check-item:last-child{border-bottom:none}
@@ -170,17 +170,17 @@ input[type="number"]{background:#ffffff!important;color:#111827!important}
    ════════════════════════════════════════════════════════════ */
 .hero-block{background:linear-gradient(135deg,#ffffff 0%,#fafbfc 100%);border-radius:24px;padding:52px 56px 48px;margin-bottom:28px;border:1px solid #e5e7eb;box-shadow:0 4px 30px rgba(15,23,42,.04);position:relative;overflow:hidden}
 .hero-block::before{content:'';position:absolute;top:-100px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(201,169,110,.1) 0%,transparent 65%);pointer-events:none}
-.hero-block::after{content:'';position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;background:radial-gradient(circle,rgba(37,99,235,.05) 0%,transparent 65%);pointer-events:none}
+.hero-block::after{content:'';position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;background:radial-gradient(circle,rgba(30,58,95,.05) 0%,transparent 65%);pointer-events:none}
 .hero-eyebrow{font-size:11px;font-weight:700;color:#c9a96e;text-transform:uppercase;letter-spacing:3px;margin-bottom:18px;display:flex;align-items:center;gap:16px;position:relative;z-index:1}
 .hero-eyebrow-line{flex:1;height:1px;background:linear-gradient(90deg,#c9a96e 0%,transparent 100%);max-width:140px}
 .hero-title{font-family:'Playfair Display',serif;font-size:44px;font-weight:600;line-height:1.15;color:#111827;letter-spacing:-1px;margin-bottom:20px;position:relative;z-index:1}
 .hero-title em{font-style:normal;color:#c9a96e;font-weight:700}
-.hero-title .accent{color:#2563eb;font-weight:700}
+.hero-title .accent{color:#1e3a5f;font-weight:700}
 .hero-sub{font-size:16px;color:#4b5563;line-height:1.6;max-width:760px;margin-bottom:26px;position:relative;z-index:1}
 .hero-pill-row{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
 .hero-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:24px;font-size:12px;font-weight:600;letter-spacing:.4px}
 .hero-pill-gold{background:#fffbeb;color:#78350f;border:1px solid #fde68a}
-.hero-pill-blue{background:#eff6ff;color:#1e3a8a;border:1px solid #bfdbfe}
+.hero-pill-blue{background:#eef1f5;color:#0f2742;border:1px solid #c8d2dc}
 .hero-pill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
 .metric-hero{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:28px 30px;position:relative;overflow:hidden;transition:all .25s ease;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 12px rgba(15,23,42,.03)}
@@ -191,7 +191,7 @@ input[type="number"]{background:#ffffff!important;color:#111827!important}
 .metric-hero-unit{font-size:22px;font-weight:500;color:#6b7280;margin-left:4px;letter-spacing:0}
 .metric-hero-caption{font-size:13px;color:#4b5563;margin-top:10px;line-height:1.5}
 .metric-hero-badge{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:6px 12px;border-radius:12px;font-size:12px;font-weight:600;align-self:flex-start}
-.badge-up{background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0}
+.badge-up{background:#eef2ef;color:#15803d;border:1px solid #bbf7d0}
 .badge-neutral{background:#f3f4f6;color:#374151;border:1px solid #e5e7eb}
 .badge-gold{background:#fffbeb;color:#92400e;border:1px solid #fde68a}
 
@@ -208,7 +208,7 @@ input[type="number"]{background:#ffffff!important;color:#111827!important}
 .alloc-eur-mini{font-size:12px;color:#6b7280;flex:0 0 60px;text-align:right}
 .alloc-mroi-mini{font-size:11px;font-weight:700;padding:3px 9px;border-radius:10px;flex:0 0 auto;letter-spacing:.3px}
 
-.decision-box{background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%);border-left:5px solid #c9a96e;border-radius:0 16px 16px 0;padding:22px 26px;margin-top:22px}
+.decision-box{background:linear-gradient(135deg,#fffbeb 0%,#f5efe9 100%);border-left:5px solid #c9a96e;border-radius:0 16px 16px 0;padding:22px 26px;margin-top:22px}
 .decision-label{font-size:10px;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
 .decision-text{font-size:14px;color:#451a03;line-height:1.65}
 .decision-text strong{color:#78350f;font-weight:700}
@@ -348,7 +348,7 @@ def style_axes(fig):
     fig.update_layout(title_font=dict(size=17, color="#111827"), legend_font=dict(color="#374151", size=12))
     return fig
 
-GC = {'perf': '#2563eb', 'crm': '#7c3aed', 'brand': '#d97706', 'offline': '#6b7280'}
+GC = {'perf': '#1e3a5f', 'crm': '#7b3f4d', 'brand': '#a8826e', 'offline': '#6b7280'}
 GN = {'perf': 'Performance', 'crm': 'CRM / Loyalty', 'brand': 'Brand Digital', 'offline': 'Offline'}
 
 # ─── SIDEBAR ───
@@ -410,7 +410,7 @@ if page == "Resumen Ejecutivo":
                 S3 · Prudente · 50 / 30 / 15 / 5
             </span>
             <span class="hero-pill hero-pill-blue">
-                <span class="hero-pill-dot" style="background:#2563eb;"></span>
+                <span class="hero-pill-dot" style="background:#1e3a5f;"></span>
                 Confianza metodológica · Media-Alta
             </span>
         </div>
@@ -422,7 +422,7 @@ if page == "Resumen Ejecutivo":
     with mc1:
         st.markdown(f"""
         <div class="metric-hero">
-            <div class="metric-hero-accent" style="background:linear-gradient(90deg,#2563eb,#60a5fa);"></div>
+            <div class="metric-hero-accent" style="background:linear-gradient(90deg,#1e3a5f,#4a6b8c);"></div>
             <div>
                 <div class="metric-hero-label">Ventas incrementales</div>
                 <div class="metric-hero-value">{vb/1e6:.1f}<span class="metric-hero-unit"> M€</span></div>
@@ -447,7 +447,7 @@ if page == "Resumen Ejecutivo":
         mejora_pct = (delta/vsq*100) if vsq > 0 else 0
         st.markdown(f"""
         <div class="metric-hero">
-            <div class="metric-hero-accent" style="background:linear-gradient(90deg,#16a34a,#4ade80);"></div>
+            <div class="metric-hero-accent" style="background:linear-gradient(90deg,#5f7a6a,#85a194);"></div>
             <div>
                 <div class="metric-hero-label">Mejora vs Status Quo</div>
                 <div class="metric-hero-value">+{delta/1e6:.1f}<span class="metric-hero-unit"> M€</span></div>
@@ -492,7 +492,7 @@ if page == "Resumen Ejecutivo":
 
     with rc2:
         mix_html = '<div class="rec-panel"><div class="rec-panel-title">El Mix Propuesto</div><div class="rec-panel-sub">Asignación por grupo de canal · 12M€ total</div>'
-        conf_col_map = {'ALTA': '#16a34a', 'MEDIA': '#d97706', 'BAJA': '#9ca3af'}
+        conf_col_map = {'ALTA': '#5f7a6a', 'MEDIA': '#a8826e', 'BAJA': '#9ca3af'}
         for g in ['perf', 'crm', 'brand', 'offline']:
             s = SUPUESTOS[g]
             pct = rp[g] * 100
@@ -603,7 +603,7 @@ if page == "Resumen Ejecutivo":
     vbs = [simular(ESCENARIOS[e]['pesos'], 'base')[0]/1e6 for e in en]
     vps = [simular(ESCENARIOS[e]['pesos'], 'pesimista')[0]/1e6 for e in en]
     vos = [simular(ESCENARIOS[e]['pesos'], 'optimista')[0]/1e6 for e in en]
-    bar_colors = ['#9ca3af', '#2563eb', '#7c3aed', '#c9a96e']
+    bar_colors = ['#9ca3af', '#1e3a5f', '#7b3f4d', '#c9a96e']
 
     fig2 = go.Figure()
     fig2.add_trace(go.Bar(
@@ -716,7 +716,7 @@ elif page == "Simulador":
     st.markdown("")
     cl, _, cr = st.columns([4.5, .2, 6.3])
     go_ = ['perf', 'crm', 'brand', 'offline']
-    cc_ = {'ALTA': '#16a34a', 'MEDIA': '#d97706', 'BAJA': '#9ca3af'}
+    cc_ = {'ALTA': '#5f7a6a', 'MEDIA': '#a8826e', 'BAJA': '#9ca3af'}
     with cl:
         np_ = {}
         for g in go_:
@@ -738,13 +738,13 @@ elif page == "Simulador":
             ps = {g: np_[g]/100 for g in go_}
             vb, db = simular(ps, 'base'); vp, _ = simular(ps, 'pesimista'); vo, _ = simular(ps, 'optimista')
             rb = vb/BUDGET; vsq, _ = simular(SQ_PCT, 'base'); dl = vb - vsq
-            sn = "+" if dl >= 0 else ""; dc = "#16a34a" if dl >= 0 else "#dc2626"
+            sn = "+" if dl >= 0 else ""; dc = "#5f7a6a" if dl >= 0 else "#9c5a5a"
             st.markdown(f'<div class="results-panel"><div class="results-title">Resultados estimados</div><div style="display:flex;gap:24px;"><div style="flex:1;"><div class="result-metric"><div class="result-label">Ventas Incrementales</div><div class="result-value">{vb/1e6:.1f}<span style="font-size:18px;color:#111827;"> M€</span></div><div class="result-sub">Rango {vp/1e6:.1f} – {vo/1e6:.1f} M€</div></div></div><div style="flex:1;"><div class="result-metric"><div class="result-label">ROI Esperado</div><div class="result-value">{rb:.1f}<span style="font-size:18px;color:#111827;">x</span></div><div class="result-sub">Sobre 12M€</div></div></div><div style="flex:1;"><div class="result-metric"><div class="result-label">vs Status Quo</div><div class="result-value" style="color:{dc};">{sn}{dl/1e6:.1f}<span style="font-size:18px;"> M€</span></div><div class="result-sub">Diferencia estimada</div></div></div></div><hr class="result-divider">{sem_big(rb)}</div>', unsafe_allow_html=True)
             st.markdown("<div style='height:12px;'></div>", unsafe_allow_html=True)
 
             # Waterfall only
             vg = [db[g]['ventas']/1e6 for g in go_]
-            fig = go.Figure(go.Waterfall(name="Contribución", orientation="v", measure=["relative"]*4+["total"], x=[GN[g] for g in go_]+["TOTAL"], y=vg+[0], text=[f"{x:.1f}M" for x in vg]+[f"{vb/1e6:.1f}M"], textposition="outside", connector=dict(line=dict(color="#d1d5db", width=1, dash="dot")), increasing=dict(marker=dict(color="#2563eb")), decreasing=dict(marker=dict(color="#dc2626")), totals=dict(marker=dict(color="#c9a96e"))))
+            fig = go.Figure(go.Waterfall(name="Contribución", orientation="v", measure=["relative"]*4+["total"], x=[GN[g] for g in go_]+["TOTAL"], y=vg+[0], text=[f"{x:.1f}M" for x in vg]+[f"{vb/1e6:.1f}M"], textposition="outside", connector=dict(line=dict(color="#d1d5db", width=1, dash="dot")), increasing=dict(marker=dict(color="#1e3a5f")), decreasing=dict(marker=dict(color="#9c5a5a")), totals=dict(marker=dict(color="#c9a96e"))))
             fig.update_layout(title="Contribución por Grupo a Ventas Incrementales", yaxis_title="M€", showlegend=False, height=380, **PL)
             st.plotly_chart(style_axes(fig), use_container_width=True)
 
@@ -769,13 +769,13 @@ elif page == "Comparador":
         vo, _ = simular(es['pesos'], 'optimista')
         esc_data[en] = {'vb': vb, 'vp': vp, 'vo': vo, 'roi': vb/BUDGET, 'delta': vb - vsq_base, 'det': db, 'pesos': es['pesos']}
 
-    colors_esc = {'S0 — Status Quo': '#6b7280', 'S1 — Perf + CRM': '#2563eb', 'S2 — Eficiencia máxima': '#7c3aed', 'S3 — Recomendado prudente': '#c9a96e'}
+    colors_esc = {'S0 — Status Quo': '#6b7280', 'S1 — Perf + CRM': '#1e3a5f', 'S2 — Eficiencia máxima': '#7b3f4d', 'S3 — Recomendado prudente': '#c9a96e'}
 
     cols = st.columns(4)
     for i, (en, ed) in enumerate(esc_data.items()):
         col_c = colors_esc.get(en, '#6b7280')
         delta_s = f"+{ed['delta']/1e6:.1f}" if ed['delta'] >= 0 else f"{ed['delta']/1e6:.1f}"
-        delta_c = "#16a34a" if ed['delta'] >= 0 else "#dc2626"
+        delta_c = "#5f7a6a" if ed['delta'] >= 0 else "#9c5a5a"
         star = " ★" if "Recomendado" in en else ""
         with cols[i]:
             st.markdown(f"""<div style="background:#fff;border:2px solid {col_c};border-radius:16px;padding:20px;text-align:center;min-height:260px;">
@@ -832,8 +832,8 @@ elif page == "Comparador":
     fig_bcg = go.Figure()
 
     # Quadrant shading
-    fig_bcg.add_shape(type="rect", x0=0, x1=35, y0=3, y1=13, fillcolor="rgba(22,163,74,0.04)", line=dict(width=0))
-    fig_bcg.add_shape(type="rect", x0=35, x1=65, y0=3, y1=13, fillcolor="rgba(37,99,235,0.04)", line=dict(width=0))
+    fig_bcg.add_shape(type="rect", x0=0, x1=35, y0=3, y1=13, fillcolor="rgba(95,122,106,0.04)", line=dict(width=0))
+    fig_bcg.add_shape(type="rect", x0=35, x1=65, y0=3, y1=13, fillcolor="rgba(30,58,95,0.04)", line=dict(width=0))
     fig_bcg.add_shape(type="rect", x0=0, x1=35, y0=-0.5, y1=3, fillcolor="rgba(156,163,175,0.04)", line=dict(width=0))
     fig_bcg.add_shape(type="rect", x0=35, x1=65, y0=-0.5, y1=3, fillcolor="rgba(220,38,38,0.04)", line=dict(width=0))
 
@@ -849,9 +849,9 @@ elif page == "Comparador":
         ))
 
     # Labels as annotations (no overlap) — posiciones dinámicas desde SUPUESTOS
-    fig_bcg.add_annotation(x=50, y=SUPUESTOS['perf']['mroi_base'],    text=f"<b>Performance</b><br>{rec_p['perf']*BUDGET/1e6:.1f}M€ · {rec_p['perf']*100:.0f}%",    font=dict(size=12, color="#2563eb"), showarrow=True, arrowhead=0, arrowcolor="#2563eb", arrowwidth=1, ax=55, ay=-40)
-    fig_bcg.add_annotation(x=30, y=SUPUESTOS['crm']['mroi_base'],     text=f"<b>CRM / Loyalty</b><br>{rec_p['crm']*BUDGET/1e6:.1f}M€ · {rec_p['crm']*100:.0f}%",     font=dict(size=12, color="#7c3aed"), showarrow=True, arrowhead=0, arrowcolor="#7c3aed", arrowwidth=1, ax=-70, ay=-35)
-    fig_bcg.add_annotation(x=15, y=SUPUESTOS['brand']['mroi_base'],   text=f"<b>Brand Digital</b><br>{rec_p['brand']*BUDGET/1e6:.1f}M€ · {rec_p['brand']*100:.0f}%",   font=dict(size=12, color="#d97706"), showarrow=True, arrowhead=0, arrowcolor="#d97706", arrowwidth=1, ax=60, ay=-30)
+    fig_bcg.add_annotation(x=50, y=SUPUESTOS['perf']['mroi_base'],    text=f"<b>Performance</b><br>{rec_p['perf']*BUDGET/1e6:.1f}M€ · {rec_p['perf']*100:.0f}%",    font=dict(size=12, color="#1e3a5f"), showarrow=True, arrowhead=0, arrowcolor="#1e3a5f", arrowwidth=1, ax=55, ay=-40)
+    fig_bcg.add_annotation(x=30, y=SUPUESTOS['crm']['mroi_base'],     text=f"<b>CRM / Loyalty</b><br>{rec_p['crm']*BUDGET/1e6:.1f}M€ · {rec_p['crm']*100:.0f}%",     font=dict(size=12, color="#7b3f4d"), showarrow=True, arrowhead=0, arrowcolor="#7b3f4d", arrowwidth=1, ax=-70, ay=-35)
+    fig_bcg.add_annotation(x=15, y=SUPUESTOS['brand']['mroi_base'],   text=f"<b>Brand Digital</b><br>{rec_p['brand']*BUDGET/1e6:.1f}M€ · {rec_p['brand']*100:.0f}%",   font=dict(size=12, color="#a8826e"), showarrow=True, arrowhead=0, arrowcolor="#a8826e", arrowwidth=1, ax=60, ay=-30)
     fig_bcg.add_annotation(x=5,  y=SUPUESTOS['offline']['mroi_base'], text=f"<b>Offline</b><br>{rec_p['offline']*BUDGET/1e6:.1f}M€ · {rec_p['offline']*100:.0f}%", font=dict(size=12, color="#6b7280"), showarrow=True, arrowhead=0, arrowcolor="#6b7280", arrowwidth=1, ax=55, ay=25)
 
     # Quadrant lines
@@ -859,10 +859,10 @@ elif page == "Comparador":
     fig_bcg.add_vline(x=35, line_dash="dot", line_color="#d1d5db", line_width=1)
 
     # Quadrant labels in corners
-    fig_bcg.add_annotation(x=1, y=12.5, text="<b>OPORTUNIDAD</b>", font=dict(size=10, color="#16a34a"), showarrow=False, xanchor='left')
-    fig_bcg.add_annotation(x=64, y=12.5, text="<b>ALTA PRIORIDAD</b>", font=dict(size=10, color="#2563eb"), showarrow=False, xanchor='right')
+    fig_bcg.add_annotation(x=1, y=12.5, text="<b>OPORTUNIDAD</b>", font=dict(size=10, color="#5f7a6a"), showarrow=False, xanchor='left')
+    fig_bcg.add_annotation(x=64, y=12.5, text="<b>ALTA PRIORIDAD</b>", font=dict(size=10, color="#1e3a5f"), showarrow=False, xanchor='right')
     fig_bcg.add_annotation(x=1, y=-0.2, text="<b>REVISAR</b>", font=dict(size=10, color="#9ca3af"), showarrow=False, xanchor='left')
-    fig_bcg.add_annotation(x=64, y=-0.2, text="<b>RIESGO</b>", font=dict(size=10, color="#dc2626"), showarrow=False, xanchor='right')
+    fig_bcg.add_annotation(x=64, y=-0.2, text="<b>RIESGO</b>", font=dict(size=10, color="#9c5a5a"), showarrow=False, xanchor='right')
 
     fig_bcg.update_layout(
         title="Posición estratégica por grupo de canal",
@@ -921,7 +921,7 @@ elif page == "Modelo y Confianza":
             labels=['Baseline<br>(estacionalidad)', 'Señal de<br>medios', 'Residual<br>(ruido)'],
             values=[80.2, 4.5, 15.3],
             hole=.55,
-            marker=dict(colors=['#2563eb', '#c9a96e', '#e5e7eb'], line=dict(color='#ffffff', width=2)),
+            marker=dict(colors=['#1e3a5f', '#c9a96e', '#e5e7eb'], line=dict(color='#ffffff', width=2)),
             textinfo='label+percent', textfont=dict(size=11, color='#374151'),
             hovertemplate='%{label}: %{value}%<extra></extra>',
             sort=False,
@@ -934,7 +934,7 @@ elif page == "Modelo y Confianza":
 
     # ── B. Supuestos mROI (visual cards) ──
     st.markdown("### Supuestos de retorno por grupo")
-    conf_colors = {'ALTA': '#16a34a', 'MEDIA': '#d97706', 'BAJA': '#9ca3af'}
+    conf_colors = {'ALTA': '#5f7a6a', 'MEDIA': '#a8826e', 'BAJA': '#9ca3af'}
     sc = st.columns(4)
     for i, (gk, s) in enumerate(SUPUESTOS.items()):
         cc = conf_colors.get(s['confianza'], '#6b7280')
@@ -979,14 +979,14 @@ elif page == "Grupos y Cobertura":
     st.markdown("Composición de cada grupo, eficiencia estimada y cómo cambia la inversión entre el Status Quo y el escenario recomendado.")
 
     # ── Channel group cards (horizontal, visual) ──
-    conf_c = {'ALTA': '#16a34a', 'MEDIA': '#d97706', 'BAJA': '#9ca3af'}
+    conf_c = {'ALTA': '#5f7a6a', 'MEDIA': '#a8826e', 'BAJA': '#9ca3af'}
     rec_p = ESCENARIOS[REC]['pesos']
     for gk, s in SUPUESTOS.items():
         inv_sq = SQ_PCT[gk] * BUDGET / 1e6
         inv_rec = rec_p[gk] * BUDGET / 1e6
         delta_inv = inv_rec - inv_sq
         delta_sign = "+" if delta_inv >= 0 else ""
-        delta_col = "#16a34a" if delta_inv >= 0 else "#dc2626"
+        delta_col = "#5f7a6a" if delta_inv >= 0 else "#9c5a5a"
         cc = conf_c.get(s['confianza'], '#6b7280')
         st.markdown(f"""<div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px 24px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
             <div style="flex:0 0 14px;"><div style="width:14px;height:14px;border-radius:50%;background:{s['color']};"></div></div>
@@ -1057,7 +1057,7 @@ elif page == "Sensibilidad":
     td.sort(key=lambda x: abs(x['hi']-x['lo']))
     fig = go.Figure()
     fig.add_trace(go.Bar(name='Pesimista', y=[d['g'] for d in td], x=[d['lo'] for d in td], orientation='h', marker_color='rgba(220,38,38,.4)', text=[f'{d["lo"]:+.1f}M€' for d in td], textposition='outside'))
-    fig.add_trace(go.Bar(name='Optimista', y=[d['g'] for d in td], x=[d['hi'] for d in td], orientation='h', marker_color='rgba(22,163,74,.4)', text=[f'{d["hi"]:+.1f}M€' for d in td], textposition='outside'))
+    fig.add_trace(go.Bar(name='Optimista', y=[d['g'] for d in td], x=[d['hi'] for d in td], orientation='h', marker_color='rgba(95,122,106,.4)', text=[f'{d["hi"]:+.1f}M€' for d in td], textposition='outside'))
     fig.add_vline(x=0, line_dash="dash", line_color="#6b7280", line_width=1)
     fig.update_layout(title="Δ Ventas si mROI varía (M€)", xaxis_title="Δ Ventas Inc. (M€)", barmode='overlay', height=350, legend=dict(orientation='h', y=-.15), **PL)
     st.plotly_chart(style_axes(fig), use_container_width=True)
