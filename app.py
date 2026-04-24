@@ -300,6 +300,19 @@ SUPUESTOS       = {k: v for k, v in SUPUESTOS.items() if not k.startswith("_")}
 SQ_PCT          = {k: v for k, v in SQ_PCT.items() if not k.startswith("_")}
 ADSTOCK_PARAMS  = {k: v for k, v in ADSTOCK_PARAMS.items() if not k.startswith("_")}
 
+# ─── PALETA EDITORIAL · sobreescribe cualquier color que pueda venir del JSON ───
+# Esto garantiza que la app SIEMPRE use los colores correctos aunque el JSON
+# del repo esté desactualizado por cache de Streamlit Cloud.
+_PALETA_GRUPOS = {
+    'perf':    '#1e3a5f',  # navy profundo
+    'crm':     '#7b3f4d',  # borgoña apagado
+    'brand':   '#a8826e',  # terracota empolvado
+    'offline': '#4a4e5a',  # carbón cálido
+}
+for _g, _hex in _PALETA_GRUPOS.items():
+    if _g in SUPUESTOS:
+        SUPUESTOS[_g]['color'] = _hex
+
 # Escenarios: inyectar SQ_PCT como el mix del S0
 _ESC_RAW = {k: v for k, v in _MR["scenarios"].items() if not k.startswith("_")}
 ESCENARIOS = {name: {**data, "pesos": SQ_PCT if name.startswith("S0") else data["pesos"]}
