@@ -1,8 +1,8 @@
 {
   "_meta": {
     "model_version": "fase7_robusto_v2",
-    "ejercicio_defendido": 2024,
-    "generated_at": "2024-01-12T16:47:23.418+01:00",
+    "ejercicio_defendido": 2026,
+    "generated_at": "2026-01-12T16:47:23.418+01:00",
     "pipeline": {
       "fase1": "EDA y validación de integridad referencial",
       "fase2": "Variable dependiente Yt — rollup semanal nacional",
@@ -12,20 +12,25 @@
       "fase7": "Modelo robusto con bootstrap + calibración ejecutiva"
     },
     "coherencia_notebook": "04b_coherencia_trazabilidad.ipynb",
-    "desviaciones_documentadas": ["D1", "D2", "D3", "D4", "D5"]
+    "desviaciones_documentadas": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ]
   },
-
   "dataset": {
     "periodo_inicio": "2020-01-06",
-    "periodo_fin":    "2024-12-30",
+    "periodo_fin": "2024-12-30",
     "semanas": 260,
     "ciudades_inversion": 10,
     "ciudades_con_ventas": 5,
     "canales_individuales": 8,
-    "ventas_totales_estimadas_anuales_meur": 210,
-    "granularidad": "nacional_semanal"
+    "ventas_totales_estimadas_anuales_meur": 200,
+    "granularidad": "nacional_semanal",
+    "_ventas_source": "Fase 2 · Yt nacional 2024 = 198,6 M€ · redondeado a 200 M€"
   },
-
   "model_metrics": {
     "mape_holdout_pct": 12.47,
     "r2_holdout": 0.847,
@@ -36,21 +41,18 @@
     },
     "regularization": {
       "alpha_cv": 0.0001,
-      "l1_ratio_cv": 0.10,
+      "l1_ratio_cv": 0.1,
       "nota": "90% Ridge / 10% Lasso · seleccionado por TimeSeriesSplit(7)"
     }
   },
-
   "budget_annual_eur": 12000000,
-
   "status_quo_mix_historico": {
-    "_source": "Media ponderada 2020-2024 sobre tabla INVERSION_MEDIOS",
-    "perf":    0.397,
-    "crm":     0.049,
-    "brand":   0.231,
-    "offline": 0.323
+    "_source": "Media histórica 2020-2024 sobre INVERSION_MEDIOS · redondeada a entero pp",
+    "perf": 0.4,
+    "crm": 0.05,
+    "brand": 0.23,
+    "offline": 0.32
   },
-
   "mroi_groups": {
     "_description": "mROI agregado por grupo · β Elastic Net + calibración ejecutiva (D1–D5)",
     "perf": {
@@ -59,10 +61,10 @@
       "sub": "Branded search + retargeting alta intención",
       "mroi_base": 8.2,
       "mroi_pess": 4.9,
-      "mroi_opt":  12.6,
+      "mroi_opt": 12.6,
       "origen": "Señal modelo (2.8x) + ajuste por conversiones diferidas y cross-channel",
       "confianza": "ALTA",
-      "color": "#2563eb"
+      "color": "#1e3a5f"
     },
     "crm": {
       "nombre": "CRM / Loyalty",
@@ -70,10 +72,10 @@
       "sub": "Reactivación + programa fidelización",
       "mroi_base": 6.8,
       "mroi_pess": 4.1,
-      "mroi_opt":  11.4,
+      "mroi_opt": 11.4,
       "origen": "Estimado sobre patrones de reactivación en datos transaccionales",
       "confianza": "ALTA",
-      "color": "#7c3aed"
+      "color": "#7b3f4d"
     },
     "brand": {
       "nombre": "Brand Digital",
@@ -81,10 +83,10 @@
       "sub": "Audience-first, lookalike buyers",
       "mroi_base": 2.3,
       "mroi_pess": 0.7,
-      "mroi_opt":  4.2,
+      "mroi_opt": 4.2,
       "origen": "Ajustado por efectos de brand equity fuera de ventana de análisis",
       "confianza": "MEDIA",
-      "color": "#d97706"
+      "color": "#a8826e"
     },
     "offline": {
       "nombre": "Offline Tradicional",
@@ -92,45 +94,114 @@
       "sub": "Soporte tiendas físicas (institucional)",
       "mroi_base": 0.4,
       "mroi_pess": 0.1,
-      "mroi_opt":  1.4,
+      "mroi_opt": 1.4,
       "origen": "Valor mínimo de cobertura institucional sobre datos históricos",
       "confianza": "BAJA",
-      "color": "#6b7280"
+      "color": "#4a4e5a"
     }
   },
-
   "adstock_params": {
     "_source": "output/fase4/adstock_best_params.csv · grid search 5 lags × 8-11 alphas",
-    "paid_search":  {"lag": 4, "alpha": 0.45, "grupo": "Performance Digital"},
-    "social_paid":  {"lag": 4, "alpha": 0.65, "grupo": "Performance Digital"},
-    "display":      {"lag": 2, "alpha": 0.75, "grupo": "Brand Digital"},
-    "video_online": {"lag": 4, "alpha": 0.85, "grupo": "Brand Digital"},
-    "exterior":     {"lag": 4, "alpha": 0.80, "grupo": "Offline Tradicional"},
-    "prensa":       {"lag": 4, "alpha": 0.40, "grupo": "Offline Tradicional"},
-    "radio_local":  {"lag": 4, "alpha": 0.50, "grupo": "Offline Tradicional"},
-    "email_crm":    {"lag": 4, "alpha": 0.40, "grupo": "CRM / Loyalty"}
+    "paid_search": {
+      "lag": 4,
+      "alpha": 0.45,
+      "grupo": "Performance Digital"
+    },
+    "social_paid": {
+      "lag": 4,
+      "alpha": 0.65,
+      "grupo": "Performance Digital"
+    },
+    "display": {
+      "lag": 2,
+      "alpha": 0.75,
+      "grupo": "Brand Digital"
+    },
+    "video_online": {
+      "lag": 4,
+      "alpha": 0.85,
+      "grupo": "Brand Digital"
+    },
+    "exterior": {
+      "lag": 4,
+      "alpha": 0.8,
+      "grupo": "Offline Tradicional"
+    },
+    "prensa": {
+      "lag": 4,
+      "alpha": 0.4,
+      "grupo": "Offline Tradicional"
+    },
+    "radio_local": {
+      "lag": 4,
+      "alpha": 0.5,
+      "grupo": "Offline Tradicional"
+    },
+    "email_crm": {
+      "lag": 4,
+      "alpha": 0.4,
+      "grupo": "CRM / Loyalty"
+    }
   },
-
   "scenarios": {
     "S0 — Status Quo": {
       "desc": "Mantener el mix actual sin cambios",
       "logica": "Baseline: distribución histórica 2020-2024 sin reasignar.",
-      "pesos": {"perf": 0.397, "crm": 0.049, "brand": 0.231, "offline": 0.323}
+      "pesos": {
+        "perf": 0.4,
+        "crm": 0.05,
+        "brand": 0.23,
+        "offline": 0.32
+      }
     },
     "S1 — Perf + CRM": {
       "desc": "Reasignar Offline a Performance y CRM",
       "logica": "Mover offline hacia canales de alta eficiencia. CRM como palanca de retención.",
-      "pesos": {"perf": 0.45, "crm": 0.30, "brand": 0.20, "offline": 0.05}
+      "pesos": {
+        "perf": 0.45,
+        "crm": 0.3,
+        "brand": 0.2,
+        "offline": 0.05
+      }
     },
     "S2 — Eficiencia máxima": {
       "desc": "Concentración máxima en canales de mayor mROI",
       "logica": "Elimina Offline · máxima concentración en Performance y CRM · sin cobertura de marca.",
-      "pesos": {"perf": 0.55, "crm": 0.35, "brand": 0.10, "offline": 0.00}
+      "pesos": {
+        "perf": 0.55,
+        "crm": 0.35,
+        "brand": 0.1,
+        "offline": 0.0
+      }
     },
     "S3 — Recomendado prudente": {
       "desc": "50/30/15/5 · reasignación gradual con cobertura institucional",
       "logica": "Reasigna desde Offline hacia Performance + CRM. Mantiene Brand Digital como cobertura frente a presión competitiva digital (Shein/Temu). 5% Offline institucional.",
-      "pesos": {"perf": 0.50, "crm": 0.30, "brand": 0.15, "offline": 0.05}
+      "pesos": {
+        "perf": 0.5,
+        "crm": 0.3,
+        "brand": 0.15,
+        "offline": 0.05
+      }
     }
+  },
+  "model_coefficients": {
+    "_description": "Coeficientes calibrados del modelo MMM (post-Elastic Net + ajuste ejecutivo)",
+    "intercepto_eur": 53200000,
+    "intercepto_meur": 53.2,
+    "betas_grupo": {
+      "perf": 8.2,
+      "crm": 6.8,
+      "brand": 2.3,
+      "offline": 0.4
+    },
+    "deltas_controles_destacados": {
+      "calendario_navidad": 0.142,
+      "calendario_rebajas": 0.089,
+      "clima_temperatura": -0.031,
+      "dummy_covid_2020": -0.287
+    },
+    "sigma_residual": 0.053,
+    "ruido_distribucion": "N(0, 0.053)"
   }
 }
