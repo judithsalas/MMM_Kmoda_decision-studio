@@ -15,6 +15,25 @@ st.set_page_config(page_title="K-Moda · MMM Decision Studio", page_icon="👔",
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@400;600;700&display=swap');
+/* Contenedor principal: centrar con max-width para que en pantallas grandes no se estire demasiado */
+.main .block-container,
+[data-testid="stAppViewContainer"] .block-container,
+[data-testid="stMain"] .block-container{
+    max-width:1400px!important;
+    padding-left:3rem!important;
+    padding-right:3rem!important;
+    padding-top:2rem!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+@media (max-width:1200px){
+    .main .block-container,
+    [data-testid="stAppViewContainer"] .block-container,
+    [data-testid="stMain"] .block-container{
+        padding-left:1.5rem!important;
+        padding-right:1.5rem!important;
+    }
+}
 .stApp,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{background-color:#f8fafc!important;color:#111827!important}
 [data-testid="stHeader"]{background-color:#f8fafc!important}
 html,body,[class*="st-"]{font-family:'DM Sans',sans-serif;color:#111827}
