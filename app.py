@@ -941,6 +941,58 @@ elif page == "Modelo y Confianza":
     </div>
     """, unsafe_allow_html=True)
 
+    # ── Parámetros del modelo · valores calibrados ──
+    _coefs = _MR.get("model_coefficients", {})
+    _intercept = _coefs.get("intercepto_meur", 53.2)
+    _betas = _coefs.get("betas_grupo", {})
+    _sigma = _coefs.get("sigma_residual", 0.053)
+    _alpha_cv = _MR["model_metrics"]["regularization"]["alpha_cv"]
+    _l1 = _MR["model_metrics"]["regularization"]["l1_ratio_cv"]
+    st.markdown(f"""
+    <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:22px 28px;margin:0 0 28px;">
+        <div style="font-size:11px;color:#c9a96e;letter-spacing:2.5px;font-weight:700;margin-bottom:18px;">PARÁMETROS CALIBRADOS · VALORES DEL MODELO</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+            <div style="border-left:3px solid #1e3a5f;padding-left:14px;">
+                <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:6px;">Intercepto</div>
+                <div style="font-family:'Playfair Display',serif;font-size:22px;color:#111827;font-weight:700;line-height:1.1;">
+                    β<sub style="font-size:13px;color:#6b7280;font-weight:400;">0</sub> = {_intercept} M€
+                </div>
+                <div style="font-size:12px;color:#6b7280;font-style:italic;margin-top:6px;line-height:1.4;">
+                    Línea base orgánica anual — ventas que ocurren sin nueva inversión publicitaria.
+                </div>
+            </div>
+            <div style="border-left:3px solid #c9a96e;padding-left:14px;">
+                <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:6px;">Coeficientes de medios</div>
+                <div style="font-family:'Playfair Display',serif;font-size:14px;color:#111827;line-height:1.7;">
+                    β<sub style="font-size:11px;color:#6b7280;">perf</sub> = <strong>{_betas.get('perf', 8.2)}</strong>
+                    &nbsp;·&nbsp;
+                    β<sub style="font-size:11px;color:#6b7280;">crm</sub> = <strong>{_betas.get('crm', 6.8)}</strong><br>
+                    β<sub style="font-size:11px;color:#6b7280;">brand</sub> = <strong>{_betas.get('brand', 2.3)}</strong>
+                    &nbsp;·&nbsp;
+                    β<sub style="font-size:11px;color:#6b7280;">offline</sub> = <strong>{_betas.get('offline', 0.4)}</strong>
+                </div>
+                <div style="font-size:12px;color:#6b7280;font-style:italic;margin-top:6px;line-height:1.4;">
+                    Ratio €-ventas por €-invertido tras adstock por canal.
+                </div>
+            </div>
+            <div style="border-left:3px solid #4a4e5a;padding-left:14px;">
+                <div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:6px;">Regularización + ruido</div>
+                <div style="font-family:'Playfair Display',serif;font-size:14px;color:#111827;line-height:1.7;">
+                    α<sub style="font-size:11px;color:#6b7280;">CV</sub> = <strong>{_alpha_cv}</strong>
+                    &nbsp;·&nbsp;
+                    l1_ratio = <strong>{_l1}</strong><br>
+                    σ<sub style="font-size:11px;color:#6b7280;">residual</sub> = <strong>{_sigma}</strong>
+                    &nbsp;·&nbsp;
+                    ε ~ N(0, σ)
+                </div>
+                <div style="font-size:12px;color:#6b7280;font-style:italic;margin-top:6px;line-height:1.4;">
+                    90% Ridge + 10% Lasso · selección por TimeSeriesSplit.
+                </div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     # ── A. How the model works (visual) ──
     st.markdown("### Cómo funciona el modelo")
     a1, a2 = st.columns([3, 2])
