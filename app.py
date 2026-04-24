@@ -213,7 +213,7 @@ section[data-testid="stSidebar"] .stRadio label:hover{color:inherit!important}
 import json
 from pathlib import Path
 
-_MODEL_RESULTS_PATH = Path(__file__).parent / "model_results.json"
+_MODEL_RESULTS_PATH = Path(__file__).parent / "data" / "model_results.json"
 with open(_MODEL_RESULTS_PATH, "r", encoding="utf-8") as _f:
     _MR = json.load(_f)
 
