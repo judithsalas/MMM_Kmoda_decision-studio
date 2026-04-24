@@ -57,6 +57,39 @@ button[kind="headerNoPadding"]{
     visibility:hidden!important;
     width:0!important;height:0!important;opacity:0!important
 }
+/* Esconder el icono nativo del expander de Streamlit que se renderiza como texto "keyboard_arrow_right" */
+[data-testid="stExpander"] summary svg,
+[data-testid="stExpander"] summary > div:first-child > span:first-child,
+[data-testid="stExpander"] summary [data-testid*="icon"],
+[data-testid="stExpander"] summary [data-testid*="Icon"],
+details > summary::-webkit-details-marker,
+details > summary::marker{
+    display:none!important;
+    visibility:hidden!important;
+    width:0!important;max-width:0!important;overflow:hidden!important;
+    font-size:0!important
+}
+/* Chevron CSS propio para los expanders */
+[data-testid="stExpander"] summary,
+details > summary{
+    position:relative;
+    padding-left:22px!important;
+    list-style:none!important
+}
+[data-testid="stExpander"] summary::before,
+details > summary::before{
+    content:"▸";
+    position:absolute;left:4px;top:50%;
+    transform:translateY(-50%);
+    color:#c9a96e;font-size:11px;font-weight:700;
+    transition:transform .2s ease;
+    font-family:'DM Sans',sans-serif!important
+}
+[data-testid="stExpander"][open] > details > summary::before,
+[data-testid="stExpander"] details[open] > summary::before,
+details[open] > summary::before{
+    transform:translateY(-50%) rotate(90deg)
+}
 h1,h2,h3{font-family:'Playfair Display',serif;color:#111827}
 [data-testid="stMarkdownContainer"] p,[data-testid="stMarkdownContainer"] li,.stTextInput label,.stSlider label,.stRadio label{color:#111827!important}
 section[data-testid="stSidebar"]{background:#ffffff!important;border-right:1px solid #e5e7eb}
@@ -338,7 +371,7 @@ with st.sidebar:
     st.markdown("""
     <div class="sb-footer">
         <div class="sb-footer-line">ANÁLISIS EJECUTIVO</div>
-        <div class="sb-footer-sub">Presupuesto 2024 · Comité de Dirección</div>
+        <div class="sb-footer-sub">Presupuesto 2026 · Comité de Dirección</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -359,7 +392,7 @@ if page == "Resumen Ejecutivo":
     st.markdown(f"""
     <div class="hero-block">
         <div class="hero-eyebrow">
-            <span>K-MODA · PRESUPUESTO 2024 · COMITÉ DE DIRECCIÓN</span>
+            <span>K-MODA · PRESUPUESTO 2026 · COMITÉ DE DIRECCIÓN</span>
             <div class="hero-eyebrow-line"></div>
         </div>
         <div class="hero-title">
@@ -539,7 +572,7 @@ if page == "Resumen Ejecutivo":
             ventas explicadas por estacionalidad, tendencia, marca acumulada y factores no pagados.
         </div>
         <div style='font-size:13px;color:#6b7280;line-height:1.5;margin-top:12px;padding:10px 14px;background:#f9fafb;border-radius:10px;border-left:3px solid #e5e7eb;'>
-            <strong>Nota:</strong> La diferencia entre ambos escenarios (~{(mkt_pct - (vsq/1e6)/TOTAL_VENTAS*100):.0f} pp) refleja el valor teórico de la reasignación hacia canales de mayor retorno marginal. Es una proyección del simulador, no una garantía — se validará con tests geo durante Q1–Q2 2024.
+            <strong>Nota:</strong> La diferencia entre ambos escenarios (~{(mkt_pct - (vsq/1e6)/TOTAL_VENTAS*100):.0f} pp) refleja el valor teórico de la reasignación hacia canales de mayor retorno marginal. Es una proyección del simulador, no una garantía — se validará con tests geo durante Q1–Q2 2026.
         </div>
         """, unsafe_allow_html=True)
 
@@ -635,7 +668,7 @@ if page == "Resumen Ejecutivo":
             <div class="takeaway-head">Decisión propuesta</div>
             <div class="takeaway-body">
                 Adoptar el escenario <strong>S3 — Prudente</strong> (50/30/15/5) como asignación ejecutiva
-                para el ciclo 2024, manteniendo los <strong>12M€</strong> de presupuesto total sin recortes.
+                para el ciclo 2026, manteniendo los <strong>12M€</strong> de presupuesto total sin recortes.
             </div>
         </div>
         <div class="takeaway-card">
@@ -651,7 +684,7 @@ if page == "Resumen Ejecutivo":
             <div class="takeaway-head">Siguientes pasos</div>
             <div class="takeaway-body">
                 Validar la reasignación mediante <strong>seguimiento mensual</strong> y tests controlados
-                (geo-experiments o holdouts) durante <strong>Q1–Q2 2024</strong> antes de consolidar la política.
+                (geo-experiments o holdouts) durante <strong>Q1–Q2 2026</strong> antes de consolidar la política.
             </div>
         </div>
     </div>
@@ -660,7 +693,7 @@ if page == "Resumen Ejecutivo":
     # Footer disclaimer
     st.markdown("""
     <div style='margin-top:36px;padding:18px 24px;background:#f9fafb;border:1px dashed #e5e7eb;border-radius:12px;font-size:12px;color:#6b7280;line-height:1.6;'>
-        <strong style='color:#374151;'>⚠️ Alcance de las estimaciones.</strong>
+        <strong style='color:#374151;'>Alcance de las estimaciones.</strong>
         Todas las cifras presentadas son estimaciones direccionales diseñadas para apoyar la decisión presupuestaria,
         no proyecciones financieras garantizadas. Los mROIs combinan la señal del modelo con ajustes por efectos de
         largo plazo no capturados en la ventana temporal de análisis. La recomendación debe validarse con seguimiento
@@ -856,7 +889,7 @@ elif page == "Comparador":
 
     # ── Scenario detail expanders ──
     for en, es in ESCENARIOS.items():
-        with st.expander(f"📋 {en}: {es['desc']}"):
+        with st.expander(f"{en}  ·  {es['desc']}"):
             st.write(f"**Lógica:** {es['logica']}"); _, dt = simular(es['pesos'], 'base')
             for g in ['perf','crm','brand','offline']: st.write(f"- **{GN[g]}**: {es['pesos'][g]*100:.0f}% → {dt[g]['inv']/1e6:.1f}M€ → {dt[g]['ventas']/1e6:.1f}M€ ventas inc. (mROI {dt[g]['mroi']}x)")
 
@@ -921,7 +954,7 @@ elif page == "Modelo y Confianza":
     st.markdown("---")
 
     # ── C. Alcance + Cumplimiento (expander) ──
-    with st.expander("📋 Alcance metodológico y cumplimiento del caso", expanded=False):
+    with st.expander("Alcance metodológico y cumplimiento del caso", expanded=False):
         st.markdown("""**Supuestos de interpretación**
 - Las estimaciones son direccionales y sirven para apoyar la decisión presupuestaria, no como proyecciones financieras garantizadas.
 - Los mROIs combinan señal del modelo con ajustes documentados por efectos de largo plazo no capturados en la ventana de análisis.
@@ -930,13 +963,13 @@ elif page == "Modelo y Confianza":
 ---
 
 **Cumplimiento del enunciado (caso K-Moda)**
-- ✅ **Construcción de Yt:** ventas netas semanales sin IVA vía rollup desde LINEA_PEDIDO.
-- ✅ **Construcción de Xt:** inversión en medios, calendario, tráfico y contexto climático.
-- ✅ **Lag y Adstock:** memoria publicitaria optimizada por canal (grid search 400 evaluaciones).
-- ✅ **Modelo regularizado:** Two-Stage RidgeCV + ElasticNet (MAPE = 12,47%).
-- ✅ **mROI por grupo:** Performance, CRM, Brand y Offline estimados con ajustes documentados.
-- ✅ **Simulador 12M€:** escenarios con rango pesimista/base/optimista.
-- ✅ **Recomendación ejecutiva:** escenario prudente defendible ante el Comité.
+- **Construcción de Yt:** ventas netas semanales sin IVA vía rollup desde LINEA_PEDIDO.
+- **Construcción de Xt:** inversión en medios, calendario, tráfico y contexto climático.
+- **Lag y Adstock:** memoria publicitaria optimizada por canal (grid search 400 evaluaciones).
+- **Modelo regularizado:** Two-Stage RidgeCV + ElasticNet (MAPE = 12,47%).
+- **mROI por grupo:** Performance, CRM, Brand y Offline estimados con ajustes documentados.
+- **Simulador 12M€:** escenarios con rango pesimista/base/optimista.
+- **Recomendación ejecutiva:** escenario prudente defendible ante el Comité.
 """)
 
 
@@ -1004,7 +1037,7 @@ elif page == "Grupos y Cobertura":
     st.plotly_chart(fig, use_container_width=True)
 
     # ── Adstock (collapsible) ──
-    with st.expander("⚙️ Parámetros técnicos: Adstock por canal", expanded=False):
+    with st.expander("Parámetros técnicos: Adstock por canal", expanded=False):
         st.markdown("Memoria publicitaria estimada en Fase 4. Define cuánto impacto residual conserva cada canal semana a semana.")
         ra = [{'Canal': c.replace('_',' ').title(), 'Grupo': p['grupo'], 'Lag (sem)': p['lag'], 'α (decay)': p['alpha'], 'Memoria': "Larga" if p['alpha']>=.6 else "Media", 'Vida media': f"{-1/np.log(p['alpha']):.1f} sem" if p['alpha']>0 else "—"} for c,p in ADSTOCK_PARAMS.items()]
         st.dataframe(pd.DataFrame(ra), use_container_width=True, hide_index=True)
