@@ -481,7 +481,9 @@ if page == "Resumen Ejecutivo":
             hole=.64,
             marker=dict(colors=[GC[k] for k in rp], line=dict(color='white', width=3)),
             textinfo='label+percent',
-            textfont=dict(size=13, color="#374151", family="DM Sans"),
+            textposition='inside',
+            insidetextorientation='horizontal',
+            textfont=dict(size=13, color='#ffffff', family='DM Sans'),
             hovertemplate='<b>%{label}</b><br>%{value:.0f}% · €%{customdata:,.0f}<extra></extra>',
             customdata=[BUDGET*rp[k] for k in rp],
             sort=False,
@@ -910,6 +912,34 @@ elif page == "Comparador":
 # ═══ PAGE 4: MODELO Y CONFIANZA ═══
 elif page == "Modelo y Confianza":
     st.markdown('<div class="section-header">Modelo y Confianza</div>', unsafe_allow_html=True)
+
+    # ── Ecuación maestra del MMM (especificada en el PDF del caso) ──
+    st.markdown("""
+    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-left:4px solid #c9a96e;border-radius:0 14px 14px 0;padding:22px 28px;margin:8px 0 24px;">
+        <div style="font-size:11px;color:#c9a96e;letter-spacing:2.5px;font-weight:700;margin-bottom:14px;">ECUACIÓN MAESTRA · MARKETING MIX MODEL</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;color:#111827;text-align:center;margin:8px 0 18px;font-style:italic;line-height:1.2;">
+            Ŷ<sub style="font-size:15px;color:#6b7280;">t</sub>
+            <span style="color:#c9a96e;font-style:normal;font-weight:400;">  =  </span>
+            <strong>β<sub style="font-size:15px;color:#6b7280;font-weight:400;">0</sub></strong>
+            <span style="color:#c9a96e;font-style:normal;font-weight:400;">  +  </span>
+            Σ β<sub style="font-size:15px;color:#6b7280;">m</sub>
+            <span style="color:#374151;"> · </span>
+            A<sub style="font-size:15px;color:#6b7280;">t,m</sub>
+            <span style="color:#c9a96e;font-style:normal;font-weight:400;">  +  </span>
+            Σ δ<sub style="font-size:15px;color:#6b7280;">j</sub>
+            <span style="color:#374151;"> · </span>
+            C<sub style="font-size:15px;color:#6b7280;">t,j</sub>
+            <span style="color:#c9a96e;font-style:normal;font-weight:400;">  +  </span>
+            <strong>ε<sub style="font-size:15px;color:#6b7280;font-weight:400;">t</sub></strong>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;font-size:13px;color:#374151;line-height:1.6;margin-top:14px;border-top:1px solid #e5e7eb;padding-top:16px;">
+            <div><strong style="color:#111827;">β<sub>0</sub> · constante</strong> — línea base orgánica de ventas (lo que ocurriría sin marketing).</div>
+            <div><strong style="color:#111827;">Σ β<sub>m</sub> · A<sub>t,m</sub> · medios</strong> — peso de cada canal sobre su inversión con adstock aplicado.</div>
+            <div><strong style="color:#111827;">Σ δ<sub>j</sub> · C<sub>t,j</sub> · controles exógenos</strong> — variables que K-Moda no controla (calendario, clima, festivos, COVID).</div>
+            <div><strong style="color:#111827;">ε<sub>t</sub> · ruido</strong> — error residual asumido como gaussiano N(0, σ).</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     # ── A. How the model works (visual) ──
     st.markdown("### Cómo funciona el modelo")
